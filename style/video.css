@@ -1,0 +1,60 @@
+.imag{
+  width: 100%;
+}
+.fgrid{
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  column-gap: 16px;
+  row-gap: 40px;
+  
+}
+@media ( max-width: 505px){
+  .fgrid{grid-template-columns: 1fr}
+} 
+
+@media ( min-width: 506px) and (max-width: 800px){
+  .fgrid{grid-template-columns: 1fr 1fr}
+} 
+
+@media(min-width:1000px) and (min-width:999px){
+  .fgrid{grid-template-columns: 1fr 1fr 1fr}
+}
+
+@media(min-width:1000px){
+  .fgrid{grid-template-columns: 1fr 1fr 1fr 1fr}
+}
+
+
+
+.title{
+  font-family: roboto, arial;
+  font-size: 16px;
+  font-weight: bold;
+}
+.exp{
+  font-size: 14px;
+  color: rgb(96, 96, 96)
+}
+.view{
+  font-size: 14px;
+  color: rgb(96 96 96);
+}
+ .inblo{
+  display:grid;
+  grid-template-columns: 50px 1fr;
+  margin-top: -5px;
+  padding-left: 7px;
+  height: 120px;
+  
+}
+
+.spic{
+  margin-top: 14px;
+}
+
+.d-imag{
+  width: 40px;
+  height: 40px;
+  border-radius: 50px;
+}
+

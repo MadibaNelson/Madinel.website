@@ -1,0 +1,63 @@
+h1{
+  position: fixed;
+  top: 0px;
+  left: 12px;
+  width: 100%;
+  text-align: center;
+
+}
+
+body{
+  height: 150px;
+  padding: 0px;
+  margin: 0px;
+}
+
+.d-game{
+  display: grid;
+  grid-template-columns: 
+  1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 
+  1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 
+  1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
+  column-gap: 3px;
+  margin-top: 70px;
+  
+}
+
+.hint1,.hint2,.hint3,.hint4,.hint5,.hint6,.hint7,.hint8,.hint9,.hint10
+,.hint11,.hint12,.hint13,.hint14,.hint15,.hint16,.hint17,.hint18,.hint19,.hint20
+,.hint21,.hint22,.hint23,.hint24,.hint25,.hint26,.hint27,.hint28,.hint29,.hint30
+,.hint31,.hint32,.hint33,.hint34,.hint35,.hint36,.hint37,.hint38,.hint39,.hint40{ 
+  padding-top: 30px;
+  text-align: center;
+  height: 90px;
+  width: 120px;
+}
+
+
+.hint1,.hint40{background-color: rgb(219, 209, 209);
+}
+
+.hint4,.hint2,.hint28{
+  background-color: aquamarine;
+}
+
+.hint18,.hint21,.hint29,.hint37{
+  background-color: rgb(115, 115, 190);
+}
+
+
+.hint7,.hint17,.hint35{
+  background-color: aqua;
+}
+
+.hint15,.hint32,.hint27{
+  background-color: rgb(196, 148, 61);
+}
+
+.hint5,.hint26{
+  background-color: pink;
+}
+
+
+
