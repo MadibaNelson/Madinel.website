@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Advanced function</title>
+  </head>
+  <body>
+
+    <button  class="js-change-text">Start
+    </button>
+
+    <button  class="js-change-text2">Start
+    </button>
+    <button class="js-click-button">
+      click
+    </button>
+
+    <button class="js-click2-button">Click2</button>
+    <div class="js-change-div"></div>
+
+
+    <script>
+
+      document.querySelector('.js-click2-button').addEventListener('click', () => {
+        document.querySelector('.js-change-div').innerHTML
+          = 'are you sure you want to change text? <button class="yes-b">yes</button><button class="no-b">no</button>';
+
+        document.querySelector('.yes-b')
+          .addEventListener('click', () => {
+            document.querySelector('.js-click2-button').innerHTML = 'loading...'
+            setTimeout(function changeText(){document.querySelector('.js-click2-button').innerHTML = 'Finished!'}, 2000);
+
+            document.querySelector('.js-change-div').innerHTML = ''
+          });
+          document.querySelector('.no-b').addEventListener('click', () => {
+            document.querySelector('.js-click2-button')
+              .innerHTML = 'Click2';
+            document.querySelector('.js-change-div').innerHTML = ''
+          });   
+          
+      })
+
+      const firstButton = document.querySelector('.js-change-text');
+
+
+        firstButton.addEventListener('click', () => { 
+          if(firstButton.innerHTML === 'Start'){
+            setTimeout(() => {firstButton.innerHTML = 'Finished!'}, 1000)
+          }else {
+            firstButton.innerHTML = 'Start'
+          }
+        });
+
+      const secButton = document.querySelector('.js-change-text2');
+        secButton.addEventListener('click', () => {
+          secButton.innerHTML = 'loading...'
+          setTimeout(function changeText(){secButton.innerHTML = 'Finished!'}, 2000);
+          setTimeout(function changeText(){secButton.innerHTML = 'Start'}, 4000);
+        })
+
+      const clickButton = document.querySelector('.js-click-button');
+
+      clickButton.addEventListener('click', () => {console.log('me')});
+
+      /*
+      
+      function greeting(){
+        console.log('hello');
+      }
+      greeting();
+
+      const name = {
+        num: 3,
+        fun: function (){
+          console.log('hello1');
+        }
+      }
+      name.fun();
+
+      // a callback function
+      function run(param){
+        param();
+      }
+      run(function(){
+        console.log('hello3');
+      })
+
+
+      setTimeout(function(){
+        console.log('What is your name?');
+        setTimeout(function(){console.log('Nelson');}, 2000);
+      }, 2000);
+
+     //console.log('next line');
+
+      setTimeout(function(){
+        console.log('What is your age?');
+        setTimeout(function(){console.log('16 years');}, 2000)
+      }, 5000);
+
+
+      [
+        'make cake', 
+        'play game',
+        'run races',
+        'sleep'
+      ].forEach((value, index) => {
+        console.log(index);
+        console.log(value);
+      });
+
+      const add = function(){
+        console.log(2+3);
+      }
+
+      add();
+      add();
+
+      function runTwice(add){add();add();}
+
+      runTwice(function(){
+        console.log(2+3);
+      });
+      
+
+      const object2 = {
+        method: () => {console.log('me and you')}
+      };
+
+      object2.method();
+      
+      console.log([1, 2, -3, 2, -5].filter((value, index) => {
+        if(value >= 0){
+          return true;
+        }
+          return false;
+      }));
+
+      console.log([1, 2, -3, 2, -5].map((value, index) => {
+        return value*2;
+      }));
+
+      console.log([1, 2, -3, 2, -5].map(value => value*2));
+
+      const multiply = param => console.log(param);
+
+      multiply(2*3);
+      */
+
+    </script>
+  </body>
+</html> 
