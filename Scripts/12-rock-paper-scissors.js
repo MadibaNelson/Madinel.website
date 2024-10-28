@@ -46,6 +46,9 @@ function playGame(playermove) {
 
   updateScore();
 
+  document.querySelector('.js-computer-button')
+      .innerHTML = `${computermove}` 
+
    document.querySelector('.js-result').innerHTML =  `You ${result}`;
 
    document.querySelector('.js-moves').innerHTML = `Your move was ${playermove}, Computer move was ${computermove}`;
@@ -53,16 +56,16 @@ function playGame(playermove) {
 }    
 
 document.querySelector('.js-rock-button').addEventListener('click', ()=>{
-  playGame('Rock');
+  delayPlayRock();
 });
 
 document.querySelector('.js-paper-button').addEventListener('click', ()=>{
-  playGame('Paper');
+  delayPlayPaper();
 });
 
 document.querySelector('.js-scissors-button').addEventListener('click', ()=>{
-  playGame('Scissors');
-});
+  delayPlayScissors();
+})
 
 document.querySelector('.js-reset-button').addEventListener('click', () => {
   document.querySelector('.js-conf-button').innerHTML = 'Are you sure you want to reset <button class="yes-b">Yes</button><button class="no-b">No</button>';
@@ -84,9 +87,9 @@ document.querySelector('.js-reset-button').addEventListener('click', () => {
 
   
 addEventListener('keydown', (event)=>{
-  if(event.key === 'r'){playGame('Rock');}
-  else if(event.key === 'p'){playGame('Paper');}
-  else if(event.key === 's'){playGame('Scissors');}
+  if(event.key === 'r'){delayPlayRock();}
+  else if(event.key === 'p'){delayPlayPaper();}
+  else if(event.key === 's'){delayPlayScissors();}
   else if(event.key === ' '){
     document.querySelector('.js-conf-button').innerHTML = 'Are you sure you want to reset <button class="yes-b">Yes</button><button class="no-b">No</button>';
 
@@ -124,4 +127,64 @@ function computerPlays() {
     computermove = 'Scissors';} 
 
     return computermove;
+}
+
+function delayPlayScissors() {
+  setTimeout(()=>{
+    document.querySelector('.js-computer-button')
+      .innerHTML = 'Rock'
+  }, 200);
+  setTimeout(()=>{
+    document.querySelector('.js-computer-button')
+      .innerHTML = 'Paper'
+  }, 400);
+  setTimeout(()=>{
+    document.querySelector('.js-computer-button')
+      .innerHTML = 'Scissors'
+  }, 600);
+  setTimeout(()=>{
+    document.querySelector('.js-computer-button')
+      .innerHTML = 'Rock'
+  }, 800);
+  setTimeout(()=>{playGame('Scissors');}, 1000);
+}
+
+function delayPlayPaper() {
+  setTimeout(()=>{
+    document.querySelector('.js-computer-button')
+      .innerHTML = 'Rock'
+  }, 200);
+  setTimeout(()=>{
+    document.querySelector('.js-computer-button')
+      .innerHTML = 'Paper'
+  }, 400);
+  setTimeout(()=>{
+    document.querySelector('.js-computer-button')
+      .innerHTML = 'Scissors'
+  }, 600);
+  setTimeout(()=>{
+    document.querySelector('.js-computer-button')
+      .innerHTML = 'Rock'
+  }, 800);
+  setTimeout(()=>{playGame('Paper');}, 1000);
+}
+
+function delayPlayRock() {
+  setTimeout(()=>{
+    document.querySelector('.js-computer-button')
+      .innerHTML = 'Rock'
+  }, 200);
+  setTimeout(()=>{
+    document.querySelector('.js-computer-button')
+      .innerHTML = 'Paper'
+  }, 400);
+  setTimeout(()=>{
+    document.querySelector('.js-computer-button')
+      .innerHTML = 'Scissors'
+  }, 600);
+  setTimeout(()=>{
+    document.querySelector('.js-computer-button')
+      .innerHTML = 'Rock'
+  }, 800);
+  setTimeout(()=>{playGame('Rock');}, 1000);
 }

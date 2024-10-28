@@ -4,7 +4,7 @@ body {
   font-family: Arial;
 }
 
-.playbuttons{
+.playbuttons, .computer-playbutton{
   background-color: black;
   height: 100px;
   color: yellow;
