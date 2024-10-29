@@ -4,7 +4,6 @@ body{
 }
 
 .background{
-  background-color: lightblue;
   width: 400px;
   height: 550px;
   display: flex;
@@ -29,7 +28,9 @@ body{
   grid-template-columns: 1fr 100px;
 }
 
-button{cursor: pointer;}
+button{cursor: pointer; border-style: solid; border-width: 1px;}
+
+button:active{background-color: rgb(228, 227, 227);}
 
 .numbers{
   display: grid;

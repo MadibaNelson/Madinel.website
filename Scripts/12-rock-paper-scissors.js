@@ -1,36 +1,44 @@
 let score = JSON.parse(localStorage.getItem('score')) || {wins: 0, losses: 0, ties: 0};
 
+const rock = '<img src="image/rock-emoji.png" class="playbutton"></img>';
+
+const paper = '<img src="image/paper-emoji.png" class="playbutton"></img>';
+
+const scissors = '<img src="image/scissors-emoji.png" class="playbutton">'
+
+console.log(rock)
+
 updateScore();
 
 function playGame(playermove) {
   const computermove = computerPlays();
   let result = '';
 
-  if (playermove === 'Scissors') {
-    if (computermove === 'Rock') {
+  if (playermove === scissors) {
+    if (computermove === rock) {
         result = 'lose';
-      } else if (computermove === 'Paper') {
+      } else if (computermove === paper) {
         result = 'win';
-      } else if (computermove === 'Scissors') {
+      } else if (computermove === scissors) {
         result = 'Tie';
       }
   }
-  else if (playermove === 'Paper' ) {
+  else if (playermove === paper) {
 
-      if (computermove === 'Rock') {
+      if (computermove === rock) {
         result = 'win';
-      } else if (computermove === 'Paper') {
+      } else if (computermove === paper) {
         result = 'Tie';
-      } else if (computermove === 'Scissors') {
+      } else if (computermove === scissors) {
         result = 'lose';
       }
   } 
-  else if (playermove === 'Rock') {
-        if (computermove === 'Rock') {
+  else if (playermove === rock) {
+        if (computermove === rock) {
         result = 'Tie';
-      } else if (computermove === 'Paper') {
+      } else if (computermove === paper) {
         result = 'lose';
-      } else if (computermove === 'Scissors') {
+      } else if (computermove === scissors) {
         result = 'win';
       } 
   }
@@ -120,11 +128,11 @@ function computerPlays() {
   let computermove = ''; 
 
   if (randomNum >= 0 && randomNum < 1 / 3) {
-    computermove = 'Rock';
+    computermove = rock;
   } else if (randomNum >= 1 / 3 && randomNum < 2 / 3) {
-    computermove = 'Paper';
+    computermove = paper;
   } else if (randomNum >= 2 / 3 && randomNum < 1) {
-    computermove = 'Scissors';} 
+    computermove = scissors;} 
 
     return computermove;
 }
@@ -132,59 +140,119 @@ function computerPlays() {
 function delayPlayScissors() {
   setTimeout(()=>{
     document.querySelector('.js-computer-button')
-      .innerHTML = 'Rock'
+      .innerHTML = rock
+  }, 100);
+  setTimeout(()=>{
+    document.querySelector('.js-computer-button')
+      .innerHTML = paper
   }, 200);
   setTimeout(()=>{
     document.querySelector('.js-computer-button')
-      .innerHTML = 'Paper'
+      .innerHTML = scissors
+  }, 300);
+  setTimeout(()=>{
+    document.querySelector('.js-computer-button')
+      .innerHTML = rock
   }, 400);
   setTimeout(()=>{
     document.querySelector('.js-computer-button')
-      .innerHTML = 'Scissors'
+      .innerHTML = rock
+  }, 500);
+  setTimeout(()=>{
+    document.querySelector('.js-computer-button')
+      .innerHTML = paper
   }, 600);
   setTimeout(()=>{
     document.querySelector('.js-computer-button')
-      .innerHTML = 'Rock'
+      .innerHTML = scissors
+  }, 700);
+  setTimeout(()=>{
+    document.querySelector('.js-computer-button')
+      .innerHTML = rock
   }, 800);
-  setTimeout(()=>{playGame('Scissors');}, 1000);
+  setTimeout(()=>{
+    document.querySelector('.js-computer-button')
+      .innerHTML = scissors
+  }, 900);
+  setTimeout(()=>{playGame(scissors);}, 1000);
 }
 
 function delayPlayPaper() {
   setTimeout(()=>{
     document.querySelector('.js-computer-button')
-      .innerHTML = 'Rock'
+      .innerHTML = rock
+  }, 100);
+  setTimeout(()=>{
+    document.querySelector('.js-computer-button')
+      .innerHTML = paper
   }, 200);
   setTimeout(()=>{
     document.querySelector('.js-computer-button')
-      .innerHTML = 'Paper'
+      .innerHTML = scissors
+  }, 300);
+  setTimeout(()=>{
+    document.querySelector('.js-computer-button')
+      .innerHTML = rock
   }, 400);
   setTimeout(()=>{
     document.querySelector('.js-computer-button')
-      .innerHTML = 'Scissors'
+      .innerHTML = rock
+  }, 500);
+  setTimeout(()=>{
+    document.querySelector('.js-computer-button')
+      .innerHTML = paper
   }, 600);
   setTimeout(()=>{
     document.querySelector('.js-computer-button')
-      .innerHTML = 'Rock'
+      .innerHTML = scissors
+  }, 700);
+  setTimeout(()=>{
+    document.querySelector('.js-computer-button')
+      .innerHTML = rock
   }, 800);
-  setTimeout(()=>{playGame('Paper');}, 1000);
+  setTimeout(()=>{
+    document.querySelector('.js-computer-button')
+      .innerHTML = scissors
+  }, 900);
+  setTimeout(()=>{playGame(paper);}, 1000);
 }
 
 function delayPlayRock() {
   setTimeout(()=>{
     document.querySelector('.js-computer-button')
-      .innerHTML = 'Rock'
+      .innerHTML = rock
+  }, 100);
+  setTimeout(()=>{
+    document.querySelector('.js-computer-button')
+      .innerHTML = paper
   }, 200);
   setTimeout(()=>{
     document.querySelector('.js-computer-button')
-      .innerHTML = 'Paper'
+      .innerHTML = scissors
+  }, 300);
+  setTimeout(()=>{
+    document.querySelector('.js-computer-button')
+      .innerHTML = rock
   }, 400);
   setTimeout(()=>{
     document.querySelector('.js-computer-button')
-      .innerHTML = 'Scissors'
+      .innerHTML = rock
+  }, 500);
+  setTimeout(()=>{
+    document.querySelector('.js-computer-button')
+      .innerHTML = paper
   }, 600);
   setTimeout(()=>{
     document.querySelector('.js-computer-button')
-      .innerHTML = 'Rock'
+      .innerHTML = scissors
+  }, 700);
+  setTimeout(()=>{
+    document.querySelector('.js-computer-button')
+      .innerHTML = rock
   }, 800);
-  setTimeout(()=>{playGame('Rock');}, 1000);
+  setTimeout(()=>{
+    document.querySelector('.js-computer-button')
+      .innerHTML = scissors
+  }, 900);
+  setTimeout(()=>{playGame(rock);}, 1000);
 }

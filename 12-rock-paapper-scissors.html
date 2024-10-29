@@ -1,27 +1,35 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title>Objects</title>
+    <title>Rock Paper Scissors Game</title>
     <!--this code is needed for rsponsive design to work, which means that it makes the page look good in a smaller gadgets-->
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <!--this code is for linking the stylesheets for the page-->
     <link rel="stylesheet" href="CSS/12-rock-paper-sicssors.css">
   </head>
   <body>
-    <h2>Rock-Paper-Scissors Game</h2>
+    <h1>Rock-Paper-Scissors Game</h1>
+    <h2>Pick your Move</h2>
 
-    <button class="playbuttons js-rock-button">Rock</button>
+    <button class="playbuttons js-rock-button">
+      <img src="image/rock-emoji.png" class="playbutton">
+      <div class="hint">Rock</div>
+    </button>
 
-    <button class="playbuttons js-paper-button">Paper</button>
+    <button class="playbuttons js-paper-button">
+      <img src="image/paper-emoji.png" class="playbutton">
+      <div class="hint">Paper</div>
+    </button>
 
-    <button class="playbuttons js-scissors-button">Scissors</button> 
+    <button class="playbuttons js-scissors-button">
+      <img src="image/scissors-emoji.png" class="playbutton">
+      <div class="hint">Scissors</div>
+    </button> 
 
-    <h2>Computer</h2>
+    <h2>Computer Move</h2>
 
-    <div>
-      <button class="computer-playbutton
-      js-computer-button">Paper</button>
-    </div>
+    <div class="computer-playbutton
+    js-computer-button"></div>
 
     <p class="js-moves"></p>
     <p class="js-result"></p>

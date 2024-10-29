@@ -11,9 +11,9 @@
     <button class="js-buttons">7</button>
     <button class="js-buttons">8</button>
     <button class="js-buttons">9</button>
-    <button class="js-buttons">.</button>
+    <button class="js-button">.</button>
     <button class="js-buttons">0</button>
-    <button class="js-buttons">=</button>
+    <button class="js-button">=</button>
   </div>
   <div class="signs">
     <button class="b-sign">C</button>
@@ -29,17 +29,16 @@
   </div>
 </div>`;
 
-document.querySelector('button').addEventListener('click', ()=>{
-  const buttonElement = Number(document.querySelector('button').innerHTML);
-  let screen = document.querySelector('.screen').innerHTML;
+const screen = [];
 
-  screen = [];
+const buttonElement = document.querySelectorAll('.js-buttons');
 
-  if(buttonElement === 1){
-    screen.push(screen);
-  }
-})
+buttonElement.forEach((button) => {
+  button.addEventListener('click', ()=>{
+    num = Number(button.innerHTML)
 
+  })
+});
 
 
 
